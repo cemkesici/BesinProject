@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/besin_graph"
+    app:startDestination="@id/besinListFragment">
+
+    <fragment
+        android:id="@+id/besinDetayFragment"
+        android:name="com.cem.view.BesinDetayFragment"
+        android:label="BesinDetayFragment" >
+        <action
+            android:id="@+id/action_besinDetayFragment_to_besinListFragment"
+            app:destination="@id/besinListFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/besinListFragment"
+        android:name="com.cem.view.BesinListFragment"
+        android:label="BesinListFragment" >
+        <action
+            android:id="@+id/action_besinListFragment_to_besinDetayFragment"
+            app:destination="@id/besinDetayFragment" />
+        <argument
+            android:name="besinId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
